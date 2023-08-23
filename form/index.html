@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        label{
+            margin: .5vw;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        input{
+            border-radius: .5vw;
+            margin: .4vw;
+            width: 20vw;
+        }
+        .a{
+            border-radius: 50%;
+        }
+    </style>
+    <title>Formulaire</title>
+</head>
+<body style="background-image: url(back.gif);">
+    <div style="display: flex;justify-content: space-between;">
+        <div class="a" style="background: url(images.gif);width: 7vw;height: 7vw;background-size: cover;background-position: center;"></div>
+        <div class="a" style="background: url(misa.png);width: 7vw;height: 7vw;background-size: cover;background-position: center;"></div>
+        <div class="a" style="background: url(mit.png);width: 7vw;height: 7vw;background-size: cover;background-position: center;"></div>
+        <div class="a" style="background: url(science.jpg);width: 7vw;height: 7vw;background-size: cover;background-position: center;"></div>
+    </div>
+    <div align="center">
+        <h1 style="text-transform: uppercase;font-size: 2vw;color: #ffffff;">universite d'antananrivo</h1>
+        <h2 style="text-transform: uppercase;font-size: 1vw;color: #ffffff;">faculte des sciences et technologies</h2>
+        <h3 style="text-transform: uppercase;font-size: .8vw;color: #ffffff;">mention informatiques et technologies</h3>
+    </div>
+    <section style="padding: 2vw; margin: 1vw 15vw;background-color: darkgray;width: 65vw;height: 40vw;border-radius: 2vw;box-shadow: -.1vw -.1vw .5vw;">
+        <form action="github.com" method="post">
+            <h3 style="text-transform: capitalize;font-family: cursive;font-size: 3vw;margin: .5vw 0vw 2.5vw 0vw;">formulaire d'inscription:</h3>
+            <div style="display: flex;">
+                <div style="display: flex;flex-direction: column;">
+                    <label for="nom">Nom</label>
+                    <label for="prenom">Prenom</label>
+                    <label for="nom">Date de naissance</label>
+                    <label for="nom">Lieu de naissance</label>
+                    <label for="prenom">Adresse</label>
+                    <label for="nom">Tel</label>
+                    <label for="prenom">Email</label>
+                    <label for="sexe">Sexe</label>
+                    <label for="nom">Series</label>
+                    <label for="prenom">Date d'obtention Bacc</label>
+                    <label for="nom">Numero matricule</label>
+                    <label for="prenom">Centre du Bacc</label>
+                    <label for="nom">Date d'insciption</label>
+                </div>
+                <div>
+                    <input type="text" for="nom" name="nom"><br>
+                    <input type="text" for="prenom" name="prenom"><br>
+                    <input type="date" for="date_de_naissance" name="date_de_naissance"><br>
+                    <input type="text" for="lieu_de_naissance" name="lieu_de_naissance"><br>
+                    <input type="text" for="adresse" name="adresse"><br>
+                    <input type="tel" for="tel" name="tel"><br>
+                    <input type="email" for="mail" name="mail"><br>
+                    <input style="margin: 0vw;width: 2vw;" type="radio" for="sexe" name="sexe"><label for="sexe">Homme</label><input type="radio" for="sexe" name="sexe" style="margin: 0vw;width: 2vw;"><label for="sexe">Femme</label><br>
+                    <select style="margin: 1vw 0vw .8vw 1vw;" name="serie" id=""><option value="1">C</option><option value="2">S</option></select><br>
+                    <input type="date" for="date_bacc" name="date_bacc"><br>
+                    <input type="number" for="matricule" name="matricule"><br>
+                    <input type="text" for="centre_bacc" name="centre_bacc"><br>
+                    <input type="date" for="date_inscription" name="date_inscription"><br>
+                </div>
+            </div>
+            <input type="submit" value="Envoyer" style="margin: 1vw 28vw; width: 8vw;border-radius: .5vw;background-color: #0abb0a;color: #ffffff;height: 2.5vw;font-size: 1.2vw;">
+        </form>
+        <footer>
+            <h4 align="center" style="font-weight: lighter;color: #ffffff;">2023 &#169 copyright</h4>
+        </footer>
+    </section>
+</body>
+</html>
