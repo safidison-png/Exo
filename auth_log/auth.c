@@ -99,8 +99,8 @@ void write(FILE *tfile, char *ch1, char* data, int ab, char **b, char **c, char 
 		for(int i=(page-1)*10;i<en;i++){
 			char loko[20];
 			char loko1[20];
-			(strcmp(status[i],"opened")==0)?strcpy(loko,""):strcpy(loko,"#000");
-			(strcmp(status[i],"opened")==0)?strcpy(loko1,""):strcpy(loko1,"#fff");
+			(strcmp(status1[i],"opened")==0)?strcpy(loko,""):strcpy(loko,"#000");
+			(strcmp(status1[i],"opened")==0)?strcpy(loko1,""):strcpy(loko1,"#fff");
 			printf("<tr style=\"background-color: %s;color: %s\"><td>%s</td><td>%s</td><td>%s</td><td><a href=\"http://www.find_user.mg/cgi-bin/find_user.cgi?utilisateur=%s\">%s</a></td></tr>", loko, loko1, date1[i], session1[i], status1[i], rdata, user1[i]);
 		}
 		printf("</table>");
