@@ -93,33 +93,35 @@ void write(FILE *tfile, char *ch1, char* data, int ab, char **b, char **c, char 
 			}
 			i++;
 		}
-		printf("<table border style=\"width: 60vw;\">");
-		printf("<tr style=\"font-weight: bolder;\"><td>Date</td><td>Session</td><td>Status</td><td>User</td></tr>");
+		printf("<table style=\"width: 60vw;\">");
+		printf("<tr style=\"height: 2vw;font-weight: bolder;background-color: #111;color: #ddd;\"><td>Date</td><td>Session</td><td>Status</td><td>User</td></tr>");
 		int en = (page*10>j)?j:page*10;
 		for(int i=(page-1)*10;i<en;i++){
 			char loko[20];
 			char loko1[20];
-			(strcmp(status1[i],"opened")==0)?strcpy(loko,""):strcpy(loko,"#000");
+			(strcmp(status1[i],"opened")==0)?strcpy(loko,""):strcpy(loko,"#111");
 			(strcmp(status1[i],"opened")==0)?strcpy(loko1,""):strcpy(loko1,"#fff");
-			printf("<tr style=\"background-color: %s;color: %s\"><td>%s</td><td>%s</td><td>%s</td><td><a href=\"http://www.find_user.mg/cgi-bin/find_user.cgi?utilisateur=%s\">%s</a></td></tr>", loko, loko1, date1[i], session1[i], status1[i], rdata, user1[i]);
+			printf("<tr style=\"margin: 2vw;height: 2vw;background-color: %s;color: %s;\"><td>%s</td><td>%s</td><td>%s</td><td><a href=\"http://www.find_user.mg/cgi-bin/find_user.cgi?utilisateur=%s\">%s</a></td></tr>", loko, loko1, date1[i], session1[i], status1[i], rdata, user1[i]);
 		}
 		printf("</table>");
+		printf("<div class=\"page\">");
+		int end = (page<=5)?10:(page+5>j/10)?j/10:page+5;
+		int start = (page<=5)?1:(page+5>j/10)?j/10-9:page-5;
+		printf("<a href=\"http://www.login.mg/cgi-bin/auth.cgi?utilisateur=%s&p=%d\">Prev<a/>", rdata, page-1);
+		for(int i=start;i<=end;i++){
+			char lokony[20];
+			(i==page)?strcpy(lokony, "#f00"):strcpy(lokony, "000");
+			printf("<a href=\"http://www.login.mg/cgi-bin/auth.cgi?utilisateur=%s&p=%d\" style=\"color: %s\">%d<a/>", rdata, i, lokony, i);
+		}
+		printf("<a href=\"http://www.login.mg/cgi-bin/auth.cgi?utilisateur=%s&p=%d\">Next<a/>", rdata, page+1);
+		printf("</div><a class=\"in btn\" href=\"http://www.login.mg/cgi-bin/find_auth.cgi\">Rechercher</a>");
+		printf("</div></div>");
 	}
 	else{
-		printf("<p style=\"color: #f00;\">Utilisateur introuvable!</p>");
+		printf("<p style=\"font-size: 1.5vw;color: #f00;\">Utilisateur introuvable!</p>");
+		printf("<a class=\"in btn\" href=\"http://www.login.mg/cgi-bin/find_auth.cgi\">Rechercher</a>");
+		printf("</div></div>");
 	}
-	printf("<div class=\"page\">");
-	int end = (page<=5)?10:(page+5>j/10)?j/10:page+5;
-	int start = (page<=5)?1:(page+5>j/10)?j/10-9:page-5;
-	printf("<a href=\"http://www.login.mg/cgi-bin/auth.cgi?utilisateur=%s&p=%d\">Prev<a/>", rdata, page-1);
-	for(int i=start;i<=end;i++){
-		char lokony[20];
-		(i==page)?strcpy(lokony, "#f00"):strcpy(lokony, "000");
-		printf("<a href=\"http://www.login.mg/cgi-bin/auth.cgi?utilisateur=%s&p=%d\" style=\"color: %s\">%d<a/>", rdata, i, lokony, i);
-	}
-	printf("<a href=\"http://www.login.mg/cgi-bin/auth.cgi?utilisateur=%s&p=%d\">Next<a/>", rdata, page+1);
-	printf("</div><a class=\"in btn\" href=\"http://www.login.mg/cgi-bin/find_auth.cgi\">Rechercher</a>");
-	printf("</div></div>");
 }
 
 char **alouer(){
