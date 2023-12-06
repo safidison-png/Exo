@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(20deg, #000, #151516, #333b35, #000);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav{
+    position: fixed;
+    top: 0vw;left: 0vw;
+    width: 100vw;
+    height: 5vw;
+    border-radius: .5vw;
+    font-family: cursive;
+    height: 2vw;
+    display: flex;
+    color: #fff;
+}
+nav h1{
+    font-size: 2vw;
+    margin: 1vw 0vw 0vw 2vw;
+}
+nav .icon{
+    background-image: url(http://www.login.mg/index.png);
+    background-size: cover;
+    background-position: center;
+    width: 4.5vw;
+    height: 4.5vw;
+    border-radius: 50%;
+}
+nav #icon{
+    display: flex;
+    width: 50vw;
+}
+nav a{
+    font-size: 1.5vw;
+    text-decoration: none;
+    font-family: sans-serif;
+    color: #a8f;
+}
+.main{
+    display: flex;
+}
+.main .hd{
+    color: #fff;
+    margin-right: 5vw;
+    font-family: cursive;
+    font-size: 2vw;
+    padding: 4.5vw
+}
+form{
+    width: 50vw;
+    height: 20vw;
+    border-radius: .2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1vw;
+    text-align: center;
+}
+form a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5vw;
+}
+.in{
+    background-color: #131010;
+    font-family: serif;
+    width: 40vw;
+    height: 3vw;
+    margin: 1vw;
+    border-radius: 5vw;
+    font-size: 1.5vw;
+    padding: .5vw 2vw;
+    border: none;
+    color: #fff;
+}
+.fbtn{
+    margin: 3vw 0vw 6vw 0vw;
+    width: 40vw;
+    height: 3vw;
+    background: linear-gradient(3deg, #000, #460833, #f00, #f00, #f00);
+}
+nav .link{
+    width: 50vw;
+    margin: 1vw;
+    display: flex;
+    justify-content: space-around;
+}
+nav .link .linked{
+    color: #564;
+    font-size: .8vw;
+}
+.main{
+    display: flex;
+}
+.main .hd{
+    color: #fff;
+    margin-right: 5vw;
+    font-family: cursive;
+    font-size: 2vw;
+    padding: 4.5vw
+}
+.abtn{
+    text-align: center;
+    font-family: serif;
+    width: 40vw;
+    height: 3vw;
+    margin: 1vw;
+    border-radius: 5vw;
+    font-size: 1.5vw;
+    padding: .5vw 2vw;
+    border: none;color: #fff;
+    background: linear-gradient(3deg, #000, #460833, #f00, #f00, #f00);
+}
+.aty{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+table{
+    font-size: 1vw;
+}
+.aty a{
+    text-decoration: none;
+}
+.page{
+    width: 40vw;
+    justify-content: space-between;
+    padding: 1vw;
+    border: none;
+    display:flex;
+    margin: 1.2vw;
+    font-size: 1.5vw;
+}
+.page a{
+    color: #000;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+.next{
+    display: none;
+}
+.page:hover .next{
+    display: block;
+}
+label{
+    color: #fff;
+    font-size: 1.5vw;
+    margin: 0vw 4vw 0vw 1vw;
+}
+.check{
+    display: flex;
+}
